@@ -217,11 +217,11 @@ public class ClientEvents {
             TEXTURE_STITCH.execute(x -> x.accept(event));
         }
 
-        @SubscribeEvent
+        /** @SubscribeEvent
         public static void onTextureStitchEvent(TextureStitchEvent.Post event) {
             ModCore.testReload();
         }
-
+        **/
         @SubscribeEvent(priority = EventPriority.LOW)
         public static void registerEntities(RegistryEvent.Register<EntityType<?>> event) {
             //REGISTER_ENTITY.execute(Runnable::run);
