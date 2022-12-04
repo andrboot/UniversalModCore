@@ -121,7 +121,7 @@ public class ItemRender {
 
         // Hook up Sprite Support (and generation)
         if (model instanceof ISpriteItemModel) {
-            ClientEvents.RELOAD.subscribe(() -> {
+            //ClientEvents.RELOAD.subscribe(() -> {
                 List<ItemStack> variants = item.getItemVariants(null);
                 Progress.Bar bar = Progress.push(item.getClass().getSimpleName() + " Icon", variants.size());
                 for (ItemStack stack : variants) {
@@ -130,7 +130,7 @@ public class ItemRender {
                     createSprite(id, ((ISpriteItemModel) model).getSpriteModel(stack));
                 }
                 Progress.pop(bar);
-            });
+            //});
         }
     }
 
